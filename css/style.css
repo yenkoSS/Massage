@@ -19,6 +19,7 @@
 html {
   font-size: 50%;
   font-family: "Open Sans", sans-serif;
+  user-select: none;
 }
 
 /* ----- TYPOGRAPHY ----- */
@@ -298,7 +299,7 @@ header {
 .nav-header {
   position: fixed;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem;
   z-index: 4;
   transition: 300ms;
 }
@@ -320,7 +321,7 @@ header {
 
 .nav-header-list-lg {
   list-style-type: none;
-  display: flex;
+  display: none;
 }
 
 .nav-header-list-lg-link {
@@ -362,15 +363,51 @@ header {
   transition: 400ms;
 }
 
-.box-list {
+.nav-header-list-sm {
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-earth-light);
+  z-index: 1;
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
-/* ----- HEADER END ----- */
+.nav-header-list-sm-link {
+  text-decoration: none;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--color-green-earth);
+  font-weight: 700;
+}
 
-/* ----- SECTION BENEFITS ----- */
+.icon-back {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;
+  height: 35px;
+}
 
+.icon-menu {
+  width: 3rem;
+  height: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .icon-menu {
+    display: none;
+  }
+}
+
+/* ----- HEADER END ----- */ /* ----- SECTION BENEFITS ----- */
 .section-benefits {
   padding: 10rem 1rem;
   /* background-image: url("../img/beneficiimasajterapeutic.png");*/
@@ -634,7 +671,7 @@ header {
     font-size: 62.5%;
   }
 
-  .box-list {
+  .nav-header-list-lg {
     display: flex;
   }
 }

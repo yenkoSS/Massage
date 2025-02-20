@@ -50,3 +50,26 @@ window.addEventListener("scroll", () => {
 document.querySelector(".btn-more").addEventListener("click", () => {
   document.querySelector(".hidden-details").style.display = "block";
 });
+
+document.querySelector(".icon-back").addEventListener("click", () => {
+  document.querySelector(".nav-header-list-sm").style.display = "none";
+});
+
+document.querySelector(".icon-menu").addEventListener("click", () => {
+  document.querySelector(".nav-header-list-sm").style.display = "flex";
+});
+
+document.querySelectorAll(".nav-header-list-sm-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.querySelector(".nav-header-list-sm").style.display = "none";
+  });
+});
+
+document.querySelectorAll(".nav-header-list-sm-link").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const id = link.getAttribute("href");
+    const navHeight = navHeaderEl.getBoundingClientRect().height;
+    document.querySelector(id).scrollIntoView({ behavior: "smooth", top: -navHeight });
+  });
+});
