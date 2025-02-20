@@ -30,6 +30,13 @@ h1 {
   font-weight: 200;
   color: white;
   letter-spacing: 0.5rem;
+  line-height: 7rem;
+}
+
+h1 span {
+  display: block;
+  font-size: 5rem;
+  text-transform: lowercase;
 }
 
 h3 {
