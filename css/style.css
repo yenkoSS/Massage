@@ -91,7 +91,13 @@ h3 span {
   width: 100%;
 }
 
-.h4-span-white {
+h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-earth-dark);
+}
+
+.h3-span-white {
   color: white;
 }
 
