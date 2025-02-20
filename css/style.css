@@ -1,0 +1,577 @@
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prata&display=swap");
+
+:root {
+  --color-earth-light: #dfd7c6;
+  --color-earth-dark: #b09763;
+  --color-green-earth: #879b90;
+  --color-text-black-dark: rgb(56, 56, 56);
+  --color-text-black-light: rgb(56, 56, 56);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 50%;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* ----- TYPOGRAPHY ----- */
+
+h1 {
+  font-family: "Hurricane", sans-serif;
+  font-size: 10rem;
+  text-transform: capitalize;
+  font-weight: 200;
+  color: white;
+  letter-spacing: 0.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  text-transform: uppercase;
+}
+
+h3 span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-text-black);
+  text-transform: lowercase;
+}
+
+.h3-before::before {
+  content: "";
+  display: inline-block;
+  min-width: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-earth-dark);
+  margin-right: 10px;
+}
+
+h4 {
+  font-family: "Prata", sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--color-earth-dark);
+  /*filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.185));
+  text-transform: uppercase;*/
+  border-bottom: 1px solid var(--color-green-earth);
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+h4 span {
+  font-family: "Hurricane", sans-serif;
+  font-size: 6rem;
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-green-earth);
+  width: 100%;
+}
+
+.h4-span-white {
+  color: white;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black-dark {
+  color: var(--color-text-black-dark);
+}
+
+.text-black-light {
+  color: var(--color-text-black-light);
+}
+
+.text-green-earth {
+  color: var(--color-green-earth);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+/* ----- TYPO END ----- */
+
+/* ----- BUTTONS ----- */
+
+button {
+  font-family: "Montserrat", sans-serif;
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+}
+
+.btn-hero {
+  padding: 2rem 4rem;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var(--color-earth-dark);
+  color: white;
+  border-radius: 0.2rem;
+  display: inline;
+  position: relative;
+  transition: 300ms;
+}
+
+.btn-hero::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: -4px;
+  left: -4px;
+  border: 1px solid var(--color-earth-dark);
+}
+
+.btn-hero:hover {
+  transform: translateX(-4px) translateY(-4px);
+  transition: 300ms;
+}
+
+.btn-hero:hover::before {
+  transform: translateX(4px) translateY(4px);
+  transition: 300ms;
+}
+
+.btn-hero-empty {
+  padding: 2rem 4rem;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var(--color-earth-light);
+  color: black;
+  border-radius: 0.2rem;
+  display: block;
+  position: relative;
+  transition: 300ms;
+}
+
+.btn-hero-empty::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: -4px;
+  left: -4px;
+  border: 1px solid var(--color-earth-light);
+  transition: 1ms;
+}
+
+.btn-hero-empty:hover {
+  transform: translateX(-4px) translateY(-4px);
+  transition: 300ms;
+}
+
+.btn-hero-empty:hover::before {
+  transform: translateX(4px) translateY(4px);
+  transition: 300ms;
+}
+
+.btn-services {
+  padding: 2rem 4rem;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var(--color-earth-dark);
+  color: white;
+  border-radius: 0.2rem;
+  display: inline;
+  position: relative;
+  transition: 300ms;
+}
+
+.btn-services::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: -4px;
+  left: -4px;
+  border: 1px solid var(--color-earth-dark);
+}
+
+.btn-services:hover {
+  transform: translateX(-4px) translateY(-4px);
+  transition: 300ms;
+}
+
+.btn-services:hover::before {
+  transform: translateX(4px) translateY(4px);
+  transition: 300ms;
+}
+
+/* ----- BUTTONS END ----- */
+
+/* ----- HEADER ----- */
+
+header {
+  height: 100vh;
+  background-image: linear-gradient(rgb(0 0 0 / 18%), rgb(0 0 0 / 58%)),
+    url(../img/hero.jpg);
+
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-header {
+  position: fixed;
+  width: 100%;
+  padding: 2rem 0;
+  z-index: 4;
+  transition: 300ms;
+}
+
+.bg-scroll {
+  background-color: rgba(0, 0, 0, 0.84);
+  transition: 300ms;
+}
+
+.btn-box {
+  display: flex;
+  gap: 3rem;
+}
+
+.icon-logo-header {
+  width: 20rem;
+  height: auto;
+}
+
+.nav-header-list-lg {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-header-list-lg-link {
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 4px;
+  transition: 200ms;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: block;
+}
+
+.nav-header-list-lg-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: -1;
+  transition: 200ms;
+}
+
+.nav-header-list-lg-link:hover {
+  color: var(--color-earth-dark);
+  transition: 200ms;
+}
+
+.nav-header-list-lg-link:hover::after {
+  top: 0px;
+  transition: 400ms;
+}
+
+.box-list {
+  display: none;
+  gap: 2rem;
+}
+
+/* ----- HEADER END ----- */
+
+/* ----- SECTION BENEFITS ----- */
+
+.section-benefits {
+  padding: 10rem 1rem;
+  /* background-image: url("../img/beneficiimasajterapeutic.png");*/
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.card-benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-benefits {
+  width: 80px;
+  height: auto;
+  border: 2px solid var(--color-green-earth);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.219));
+}
+
+.card-benefits-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: var(--color-earth-dark);
+}
+
+.card-benefits-details {
+  font-size: 16px;
+  color: var(--color-green-earth);
+  text-align: center;
+}
+
+/* ----- SECTION BENEFITS END ----- */
+
+/* ----- SECTION SERVICES ----- */
+
+.section-services-title {
+  background-image: linear-gradient(rgb(0 0 0 / 65%), rgb(0 0 0 / 58%)),
+    url(../img/hero.jpg);
+  padding: 4rem;
+}
+
+.section-services {
+  padding: 8rem 0rem 10rem 0rem;
+}
+
+.box-services {
+  width: 95%;
+  position: relative;
+}
+
+.icon-services {
+  width: 20rem;
+  height: auto;
+  filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.171));
+}
+
+@media screen and (min-width: 992px) {
+  .box-services {
+    width: 75%;
+  }
+}
+
+/* ----- SECTION SERVICES END ----- */
+
+/* ----- SECTION PRICES ----- */
+
+.section-prices {
+  padding: 10rem 1rem;
+  background-color: var(--color-earth-light);
+}
+
+.card-prices {
+  background-color: var(--color-green-earth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  width: 95%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-prices-title {
+  width: 100%;
+  background-color: var(--color-earth-dark);
+  padding: 3rem 0;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+}
+
+.card-prices-price {
+  font-size: 4rem;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: var(--color-earth-light);
+  width: 100%;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.card-prices-price span:nth-child(1) {
+  font-weight: 300;
+}
+
+.card-prices-price span:nth-child(2) {
+  font-size: 16px;
+}
+
+.card-prices-feature {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2rem;
+  color: white;
+}
+
+@media screen and (min-width: 1200px) {
+  .card-prices {
+    width: 80%;
+  }
+}
+
+/* ----- SECTION PRICES END ----- */
+
+/* ----- SECTION GALLERY ----- */
+
+.section-gallery {
+  padding: 10rem 1rem;
+}
+
+/* ----- SECTION GALLERY END ----- */
+
+/* ----- SECTION CONTACT ----- */
+
+.section-contact {
+  padding: 10rem 1rem;
+  background-color: var(--color-earth-light);
+}
+
+.card-contact {
+  padding: 3rem;
+  border: 1px solid var(--color-earth-dark);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.card-contact-icon {
+  border: 2px solid var(--color-green-earth);
+  border-radius: 2rem;
+  padding: 1rem;
+  width: 8rem;
+  height: auto;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.192));
+}
+
+.card-contact-title {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: var(--color-earth-dark);
+  font-weight: 500;
+}
+
+.card-contact-details {
+  font-size: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-green-earth);
+  font-weight: 500;
+}
+
+.box-socials {
+  display: flex;
+  gap: 3rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-contact-social {
+  width: 30px;
+  height: auto;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.116));
+}
+
+/* ----- SECTION CONTACT END ----- */
+
+/* ----- GLOBAL ----- */
+
+.icon-section {
+  display: block;
+  width: 7rem;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-section-white {
+  display: block;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 50%;
+  width: 9rem;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.g-7 {
+  row-gap: 7rem;
+}
+
+/* ----- GLOBAL END ----- */
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .box-list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
