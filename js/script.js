@@ -46,3 +46,7 @@ window.addEventListener("scroll", () => {
   let offset = window.pageYOffset;
   headerEl.style.backgroundPositionY = offset * 0.8 + "px";
 });
+
+document.querySelector(".btn-more").addEventListener("click", () => {
+  document.querySelector(".hidden-details").style.display = "block";
+});

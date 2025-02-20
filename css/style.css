@@ -247,6 +247,41 @@ button {
   transition: 300ms;
 }
 
+.btn-more {
+  padding: 2rem 4rem;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var(--color-green-earth);
+  color: white;
+  border-radius: 0.2rem;
+  display: inline;
+  position: relative;
+  transition: 300ms;
+}
+
+.btn-more::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: -4px;
+  left: -4px;
+  border: 1px solid var(--color-earth-dark);
+}
+
+.btn-more:hover {
+  transform: translateX(-4px) translateY(-4px);
+  transition: 300ms;
+}
+
+.btn-more:hover::before {
+  transform: translateX(4px) translateY(4px);
+  transition: 300ms;
+}
+
 /* ----- BUTTONS END ----- */
 
 /* ----- HEADER ----- */
@@ -342,6 +377,24 @@ header {
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
+}
+
+.hidden-details {
+  display: none;
+  animation-name: showDetails;
+  animation-duration: 800ms;
+}
+
+@keyframes showDetails {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card-benefits {
