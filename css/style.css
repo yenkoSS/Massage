@@ -56,17 +56,6 @@ h3 span {
   text-transform: lowercase;
 }
 
-.h3-before::before {
-  content: "";
-  display: inline-block;
-  min-width: 7px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--color-earth-dark);
-  margin-right: 10px;
-}
-
 h3 {
   font-family: "Prata", sans-serif;
   font-size: 4rem;
@@ -78,6 +67,8 @@ h3 {
   width: 100%;
   text-align: center;
   position: relative;
+  transform: translateX(-100px);
+  opacity: 0;
 }
 
 h3 span {
@@ -90,6 +81,23 @@ h3 span {
   transform: translateX(-50%);
   color: var(--color-green-earth);
   width: 100%;
+}
+
+.h3-before::before {
+  content: "";
+  display: inline-block;
+  min-width: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-earth-dark);
+  margin-right: 10px;
+}
+
+.show-h3 {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 800ms;
 }
 
 h4 {
@@ -260,6 +268,21 @@ button {
   display: inline;
   position: relative;
   transition: 300ms;
+}
+
+.btn-schedule-offset1 {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
+.btn-schedule-offset2 {
+  transform: translateX(200px);
+  opacity: 0;
+}
+
+.show-btn-schedule {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .btn-more::before {
@@ -439,6 +462,32 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.card-offset1 {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.card-offset2 {
+  transform: translateY(150px);
+  opacity: 0;
+}
+
+.card-offset3 {
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+.card-offset4 {
+  transform: translateY(250px);
+  opacity: 0;
+}
+
+.show-card {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s;
 }
 
 .icon-benefits {

@@ -43,7 +43,7 @@ document.querySelectorAll(".btn-order").forEach((btn) => {
 
 const headerEl = document.querySelector(".parallax");
 window.addEventListener("scroll", () => {
-  let offset = window.pageYOffset;
+  let offset = window.scrollY;
   headerEl.style.backgroundPositionY = offset * 0.8 + "px";
 });
 
@@ -73,3 +73,39 @@ document.querySelectorAll(".nav-header-list-sm-link").forEach((link) => {
     document.querySelector(id).scrollIntoView({ behavior: "smooth", top: -navHeight });
   });
 });
+
+/* Scroll Reveal Effects*/
+
+const cardsBenefitsOffsetList = document.querySelectorAll(".card-benefits");
+const cardsPricesOffsetList = document.querySelectorAll(".card-prices");
+const cardsContactOffsetList = document.querySelectorAll(".card-contact");
+const h3List = document.querySelectorAll("h3");
+const btnSheduleList = document.querySelectorAll(".btn-schedule");
+
+const cardsOffsetListObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("show-card", entry.isIntersecting);
+    if (entry.isIntersecting) cardsOffsetListObserver.unobserve(entry.target);
+  });
+});
+
+const h3Observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("show-h3", entry.isIntersecting);
+    if (entry.isIntersecting) h3Observer.unobserve(entry.target);
+  });
+});
+
+const btnScheduleObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("show-btn-schedule", entry.isIntersecting);
+    if (entry.isIntersecting) btnScheduleObserver.unobserve(entry.target);
+  });
+});
+
+cardsBenefitsOffsetList.forEach((card) => cardsOffsetListObserver.observe(card));
+cardsPricesOffsetList.forEach((card) => cardsOffsetListObserver.observe(card));
+cardsContactOffsetList.forEach((card) => cardsOffsetListObserver.observe(card));
+h3List.forEach((h3) => h3Observer.observe(h3));
+btnSheduleList.forEach((h3) => btnScheduleObserver.observe(h3));
+/* Scroll Reveal Effects END*/
