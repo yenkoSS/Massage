@@ -32,12 +32,16 @@ h1 {
   color: white;
   letter-spacing: 0.5rem;
   line-height: 7rem;
+  animation-name: showH1;
+  animation-duration: 1000ms;
 }
 
 h1 span {
   display: block;
   font-size: 5rem;
   text-transform: lowercase;
+  animation-name: showH1Span;
+  animation-duration: 1000ms;
 }
 
 h2 {
@@ -137,6 +141,30 @@ p {
 
 .text-italic {
   font-style: italic;
+}
+
+@keyframes showH1 {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes showH1Span {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 /* ----- TYPO END ----- */
@@ -335,6 +363,20 @@ header {
 .btn-box {
   display: flex;
   gap: 3rem;
+  animation-name: showBtnBox;
+  animation-duration: 1000ms;
+}
+
+@keyframes showBtnBox {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .icon-logo-header {
@@ -430,7 +472,9 @@ header {
   }
 }
 
-/* ----- HEADER END ----- */ /* ----- SECTION BENEFITS ----- */
+/* ----- HEADER END ----- */
+
+/* ----- SECTION BENEFITS ----- */
 .section-benefits {
   padding: 10rem 1rem;
   /* background-image: url("../img/beneficiimasajterapeutic.png");*/
@@ -676,6 +720,8 @@ header {
 
 /* ----- SECTION CONTACT END ----- */
 
+/* ----- FOOTER ----- */
+
 footer {
   background-color: var(--color-green-earth);
   padding: 4rem;
@@ -714,6 +760,9 @@ blockquote {
     gap: 2rem;
   }
 }
+
+/* ----- FOOTER END ----- */
+
 /* ----- GLOBAL ----- */
 
 .icon-section {
@@ -747,6 +796,8 @@ blockquote {
 
 /* ----- GLOBAL END ----- */
 
+/* ----- MEDIA QUERIES ----- */
+
 @media screen and (min-width: 768px) {
   html {
     font-size: 55%;
@@ -765,3 +816,5 @@ blockquote {
 
 @media screen and (min-width: 1200px) {
 }
+
+/* ----- MEDIA QUERIES END ----- */
