@@ -15,7 +15,7 @@ document.querySelectorAll(".nav-header-list-lg-link").forEach((link) => {
     e.preventDefault();
     const id = link.getAttribute("href");
     const navHeight = navHeaderEl.getBoundingClientRect().height;
-    document.querySelector(id).scrollIntoView({ behavior: "smooth", top: -navHeight });
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   });
 });
 
@@ -69,9 +69,24 @@ document.querySelectorAll(".nav-header-list-sm-link").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     const id = link.getAttribute("href");
-    const navHeight = navHeaderEl.getBoundingClientRect().height;
-    document.querySelector(id).scrollIntoView({ behavior: "smooth", top: -navHeight });
+
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   });
+});
+
+document.querySelectorAll(".nav-footer-list-link").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const id = link.getAttribute("href");
+
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+document.querySelector(".logo-footer").addEventListener("click", (e) => {
+  e.preventDefault();
+  const id = document.querySelector(".logo-footer").getAttribute("href");
+  document.querySelector(id).scrollIntoView({ behavior: "smooth" });
 });
 
 /* Scroll Reveal Effects*/
