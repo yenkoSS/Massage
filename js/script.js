@@ -93,7 +93,7 @@ document.querySelector(".logo-footer").addEventListener("click", (e) => {
 
 const cardsBenefitsOffsetList = document.querySelectorAll(".card-benefits");
 const cardsPricesOffsetList = document.querySelectorAll(".card-prices");
-const cardsContactOffsetList = document.querySelectorAll(".card-contact");
+const cardsContactOffsetList = document.querySelectorAll(".card-contact-details");
 const h3List = document.querySelectorAll("h3");
 const btnSheduleList = document.querySelectorAll(".btn-schedule");
 

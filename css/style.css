@@ -298,6 +298,20 @@ button {
   transition: 300ms;
 }
 
+.btn-send {
+  padding: 2rem 4rem;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var(--color-green-earth);
+  color: white;
+  border-radius: 0.2rem;
+  display: inline;
+  position: relative;
+  transition: 300ms;
+}
+
 .btn-schedule-offset1 {
   transform: translateX(-200px);
   opacity: 0;
@@ -671,34 +685,71 @@ header {
 }
 
 .card-contact {
-  padding: 3rem;
-  border: 1px solid var(--color-earth-dark);
-  border-radius: 2rem;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-contact-left {
+  width: 100%;
+}
+
+.card-contact-right {
+  width: 100%;
+  min-height: 300px;
+}
+
+@media screen and (min-width: 992px) {
+  .card-contact {
+    flex-direction: row;
+  }
+
+  .card-contact-left {
+    width: 50%;
+  }
+
+  .card-contact-right {
+    width: 50%;
+  }
+}
+
+.iframe-container {
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.card-contact-details {
+  padding: 2rem;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 100%;
 }
 
 .card-contact-icon {
-  border: 2px solid var(--color-green-earth);
-  border-radius: 2rem;
-  padding: 1rem;
-  width: 8rem;
+  width: 5rem;
   height: auto;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.192));
 }
 
 .card-contact-title {
-  font-size: 2rem;
+  font-size: 18px;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   color: var(--color-earth-dark);
   font-weight: 500;
 }
 
-.card-contact-details {
-  font-size: 2.2rem;
+.card-contact-text-details {
+  font-size: 18px;
   font-family: "Montserrat", sans-serif;
   color: var(--color-green-earth);
   font-weight: 500;
@@ -795,6 +846,103 @@ blockquote {
 }
 
 /* ----- GLOBAL END ----- */
+
+/* ----- form START ----- */
+
+.form-contact {
+  width: 100%;
+  padding: 4rem;
+  margin-bottom: 3rem;
+}
+
+.contact-details-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-form-contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-label {
+  font-size: 16px;
+  color: var(--color-text);
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-input {
+  padding: 10px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  font-family: "Onest", sans-serif;
+  font-size: 12px;
+  border: none;
+  border-bottom: 1px solid var(--color-green-earth);
+  background-color: transparent;
+}
+
+.form-input::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-input::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-input:focus {
+  outline: none;
+  font-size: 16px;
+  transition: 100ms ease;
+}
+
+.form-textarea {
+  padding: 5px;
+  resize: none;
+  height: 100px;
+  border: none;
+  border-bottom: 1px solid var(--color-green-earth);
+  background: none;
+  font-family: "Onest", sans-serif;
+  font-size: 12px;
+}
+
+.form-textarea:focus {
+  outline: none;
+  font-size: 16px;
+  transition: 100ms ease;
+}
+
+.form-textarea::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-error {
+  color: Red;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.text-success {
+  display: none;
+  font-size: 2.3rem;
+  color: var(--color-blue);
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+.form-title {
+  font-size: 2.3rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-green-earth);
+}
+
+/*----- form END ----- */
 
 /* ----- MEDIA QUERIES ----- */
 
